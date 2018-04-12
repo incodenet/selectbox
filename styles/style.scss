@@ -1,0 +1,151 @@
+body {
+	margin: 0;
+	background-color: rgb(227,227,227);
+	text-align: center;
+}
+
+div.selectbox {
+	position:relative;
+	display:inline-block;
+	cursor:default;
+	text-align:left;
+	line-height:30px;
+	clear:both;
+	color:#888;
+}
+
+span.selectedOption {
+	width:170px;
+	height: 30px;
+	text-indent:20px;
+	border:1px solid #68e91e;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	background:#f6f6f6;
+	overflow:hidden;
+	position: relative;
+	cursor: pointer;
+}
+
+span.selectedOption:after {
+	content: '\25BE';
+	font-size: 33px;
+	position: absolute;
+	top: 12px;
+	right: 0px;
+	cursor: pointer;
+}
+
+span.selectedOption {
+	position:relative;
+	float:left;
+	padding: 10px;
+	z-index:1;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+div.select {
+	position:absolute;
+	top:50px;
+	left:0;
+	width: 100%;
+	border:1px solid #68e91e;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	overflow:hidden;
+	background:#f6f6f6;
+	padding-top:2px;
+	display:none;
+	z-index: 2;
+}
+	
+span.selectOption {
+	display:block;
+	width:100%;
+	line-height:20px;
+	padding:10px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+span.selectOption.selected {
+	color:#f6f6f6;
+	background:#68e91e;	
+}
+
+span.selectOption:hover {
+	color:#f6f6f6;
+	background:#68e91e;	
+}
+
+.multiple .select span {
+	display: inline-block;
+	vertical-align: middle;
+
+	&:hover {
+		background: transparent;
+		color: inherit;	
+	}
+
+	&:before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		width: 15px;
+		height: 15px;
+		margin-right: 5px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+}
+
+.multiSpan {
+	background-color: #68e91e;
+	color: #f6f6f6;
+}
+
+.multiSelected {
+	&:before {
+		content: "";
+		background-image: url("../img/success.svg");
+
+	}
+}
+
+.disabled {
+	background-color:#fff;
+	color: #888;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+.disabled:hover {
+	background-color:#fff !important;
+	color: #888 !important;
+}
+
+input[type=submit] {
+	display: block;
+	margin: 0 auto;
+	outline: none;
+	border: none;
+	width: 100px;
+	height: 30px;
+	background-color: #68e91e;
+	color: #000;
+	text-transform: uppercase;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+input[type=text] {
+	outline: none;
+	border: none;
+	height: 30px;
+	padding: 0px 10px;
+	background-color: #fafafa;
+	color: #000;
+	border-radius: 5px;
+}
